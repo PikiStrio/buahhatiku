@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             'role' => $user['role']
         ];
         if ($user['role'] === 'admin') {
-            header("Location: ../resources/views/admin/index.php");
+            header("Location: ../resources/admin/index.php");
         } else {
             header("Location: ../index.php");
         }

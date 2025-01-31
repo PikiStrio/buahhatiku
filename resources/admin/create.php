@@ -1,5 +1,5 @@
 <?php
-include '../service/connect.php';
+include '../../service/connect.php';
 session_start();
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -12,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // Upload Foto
     $photo = $_FILES['photo']['name'];
-    $target = 'uploads/' . $photo;
+    $target = '../../public/uploads/' . $photo;
     move_uploaded_file($_FILES['photo']['tmp_name'], $target);
 
     // Insert data
